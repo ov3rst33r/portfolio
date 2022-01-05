@@ -3,6 +3,7 @@
 :root {
   --mainBackgroundColor: #000000;
   --darkerBackgroundColor: #2c2c3a;
+  --evenDarkerBackgroundColor: #1a1a23;
   --silverTextColor: #d6d6d6;
   --hoverColor: #32936f;
   --languageHoverColor: #ff7f11;
@@ -134,5 +135,23 @@ body {
 }
 
 .contactsBlock {
-  height: 100px;
+  background-color: var(--evenDarkerBackgroundColor);
+  text-align: center;
+  width: 100%;
+  height: 40px;
+  line-height: 40px;
+  position: fixed;
+  bottom: 0;
+}
+
+.cvLink {
+  font-family: 'Roboto', sans-serif;
+  text-decoration: none;
+  color: var(--silverTextColor);
+  font-size: 20px;
+  transition: color 0.5s;
+}
+
+.cvLink:hover {
+  color: var(--languageHoverColor);
 }
