@@ -7,6 +7,8 @@
   --silverTextColor: #d6d6d6;
   --hoverColor: #32936f;
   --languageHoverColor: #ff7f11;
+  --borderColor: #0051ff;
+  --boxShadowColor: #c86fc9;
 }
 
 * {
@@ -107,9 +109,10 @@ body {
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  width: 500px;
-  border: 3px solid #0051ff;
-  box-shadow: 8px 8px #C86FC9;
+  width: 50vh;
+  background-color: #0A0A0A;
+  border: 3px solid var(--borderColor);
+  box-shadow: 8px 8px var(--boxShadowColor);
   border-radius: 5px;
   justify-content: center;
   text-align: center;
@@ -120,6 +123,7 @@ body {
 .stackTitle, .toolsTitle, .educationTitle, .meTitle {
   position: absolute;
   top: 0;
+  text-shadow: var(--borderColor) 2px 1px;
 } 
 
 .stackContent, .toolsContent, .educationContent, .meContent {
@@ -154,4 +158,18 @@ body {
 
 .cvLink:hover {
   color: var(--languageHoverColor);
+}
+
+@media screen and (max-width: 1200px) {
+  .knowledgeBlock {
+    flex-direction: column;
+    margin-bottom: 200px;
+    align-items: center;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .knowledgeStack, .knowledgeTools, .knowledgeEducation, .knowledgeMe {
+    width: 30vh;
+  }
 }
