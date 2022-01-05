@@ -1,12 +1,138 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
-body {
-  background-color: #F5FFFA;
-  color: #1a1b41;
+:root {
+  --mainBackgroundColor: #000000;
+  --darkerBackgroundColor: #2c2c3a;
+  --silverTextColor: #d6d6d6;
+  --hoverColor: #32936f;
+  --languageHoverColor: #ff7f11;
 }
 
-main {
+* {
+  margin: 0;
+}
+
+body {
+  background-color: var(--mainBackgroundColor);
+  color: var(--silverTextColor);
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  position: relative;
+  height: 60px;
+  background-color: var(--darkerBackgroundColor);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.headerNav {
+  display: flex;
+  align-items: center;
+  margin-left: 18px;
+  gap: 18px;
+}
+
+.navLink {
+  text-decoration: none;
+  color: var(--silverTextColor);
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+  transition: color 0.5s;
+}
+
+.navLink:hover {
+  color: var(--hoverColor);
+}
+
+.selectorButton {
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+  margin-right: 18px;
+}
+
+.languages {
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+  display: none;
+  position: absolute;
+  z-index: 1;
+}
+
+.languageOption {
+  transition: color 0.5s;
+}
+
+.languageOption:hover {
+  color: var(--languageHoverColor);
+}
+
+.headerLanguageSelector:hover .languages {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.greetingsBlock {
   font-family: 'Roboto', sans-serif;
   text-align: center;
   margin-top: 10%;
+}
+
+.greetingsBlock_title {
+  font-size: 60px;
+}
+
+.knowledgeBlock {
+  display: flex;
+  font-family: 'Roboto', sans-serif;
+  justify-content: space-between;
+  margin-top: 100px;
+  gap: 100px;
+}
+
+.knowledgeBlock:nth-child(1n) {
+  margin-left: 100px;
+}
+
+.knowledgeBlock:nth-child(3n) {
+  margin-right: 100px;
+}
+
+.knowledgeStack, .knowledgeTools, .knowledgeEducation, .knowledgeMe {
+  position: relative;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  width: 500px;
+  border: 3px solid #0051ff;
+  box-shadow: 8px 8px #C86FC9;
+  border-radius: 5px;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.stackTitle, .toolsTitle, .educationTitle, .meTitle {
+  position: absolute;
+  top: 0;
+} 
+
+.stackContent, .toolsContent, .educationContent, .meContent {
+  padding-top: 35px;
+  padding-bottom: 10px;
+}
+
+
+.knowledgeEducation, .knowledgeMe {
+  box-sizing: border-box;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.contactsBlock {
+  height: 100px;
 }
