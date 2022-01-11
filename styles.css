@@ -1,14 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
 :root {
-  --mainBackgroundColor: #000000;
-  --darkerBackgroundColor: #2c2c3a;
-  --evenDarkerBackgroundColor: #1a1a23;
-  --silverTextColor: #d6d6d6;
-  --hoverColor: #32936f;
-  --languageHoverColor: #ff7f11;
-  --borderColor: #0051ff;
-  --boxShadowColor: #c86fc9;
+  --mainBackgroundBlack: #000000;
+  --lighterBackgroundBlack: #2c2c3a;
+  --evenDarkerBackgroundBlack: #0c0c0f;
+  --textSilver: #d6d6d6;
+  --hoverGreen: #32936f;
+  --perfectBlue: #0051ff;
+  --boxShadowPink: #c86fc9;
 }
 
 * {
@@ -16,19 +15,21 @@
 }
 
 body {
-  background-color: var(--mainBackgroundColor);
-  color: var(--silverTextColor);
   display: flex;
   flex-direction: column;
+  gap: 120px;
+  height: 100%;
+  background-color: var(--mainBackgroundBlack);
+  font-family: 'Roboto', sans-serif;
+  color: var(--textSilver);
 }
 
 .header {
-  position: relative;
-  height: 60px;
-  background-color: var(--darkerBackgroundColor);
   display: flex;
   justify-content: space-between;
   align-items: center;
+  height: 60px;
+  background-color: var(--lighterBackgroundBlack);
 }
 
 .headerNav {
@@ -40,136 +41,90 @@ body {
 
 .navLink {
   text-decoration: none;
-  color: var(--silverTextColor);
+  color: var(--textSilver);
   font-family: 'Roboto', sans-serif;
   font-size: 20px;
   transition: color 0.5s;
+}
+
+.navLink-linkedIn {
+  pointer-events: none;
+  color: gray;
 }
 
 .navLink:hover {
-  color: var(--hoverColor);
-}
-
-.selectorButton {
-  font-family: 'Roboto', sans-serif;
-  font-size: 20px;
-  margin-right: 18px;
-}
-
-.languages {
-  font-family: 'Roboto', sans-serif;
-  font-size: 20px;
-  display: none;
-  position: absolute;
-  z-index: 1;
-}
-
-.languageOption {
-  transition: color 0.5s;
-}
-
-.languageOption:hover {
-  color: var(--languageHoverColor);
-}
-
-.headerLanguageSelector:hover .languages {
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
+  color: var(--hoverGreen);
 }
 
 .greetingsBlock {
-  font-family: 'Roboto', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   text-align: center;
-  margin-top: 10%;
 }
 
 .greetingsBlock_title {
   font-size: 60px;
 }
 
+.greetingsBlock_subTitle {
+  font-size: 30px;
+}
+
 .knowledgeBlock {
-  display: flex;
-  font-family: 'Roboto', sans-serif;
-  justify-content: space-between;
-  margin-top: 100px;
-  gap: 100px;
-}
-
-.knowledgeBlock:nth-child(1n) {
-  margin-left: 100px;
-}
-
-.knowledgeBlock:nth-child(3n) {
-  margin-right: 100px;
+  flex: 1 0 auto;
+  margin: 0 auto;
+  max-width: 1000px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 30px;
 }
 
 .knowledgeStack, .knowledgeTools, .knowledgeEducation, .knowledgeMe {
-  position: relative;
   box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
-  width: 50vh;
-  background-color: #0A0A0A;
-  border: 3px solid var(--borderColor);
-  box-shadow: 8px 8px var(--boxShadowColor);
-  border-radius: 5px;
-  justify-content: center;
+  padding: 20px;
   text-align: center;
-  align-items: center;
-  overflow: hidden;
+  max-width: 250px;
+  background-color: var(--evenDarkerBackgroundBlack);
+  border: 2px solid var(--perfectBlue);
+  border-radius: 8px;
+  box-shadow: 8px 8px var(--boxShadowPink);
 }
 
-.stackTitle, .toolsTitle, .educationTitle, .meTitle {
-  position: absolute;
-  top: 0;
-  text-shadow: var(--borderColor) 2px 1px;
-} 
-
-.stackContent, .toolsContent, .educationContent, .meContent {
-  padding-top: 35px;
-  padding-bottom: 10px;
+.blockTitle {
+  padding-bottom: 30px;
+  text-shadow: 2px 2px var(--perfectBlue);
 }
 
+@media screen and (max-width: 1024px) {
+  .knowledgeBlock {
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 30px;
+  }
+}
 
-.knowledgeEducation, .knowledgeMe {
-  box-sizing: border-box;
-  padding-left: 10px;
-  padding-right: 10px;
+@media screen and (max-width: 600px) {
+  .knowledgeBlock {
+    grid-template-columns: repeat(1, 1fr);
+    row-gap: 30px;
+  }
 }
 
 .contactsBlock {
-  background-color: var(--evenDarkerBackgroundColor);
-  text-align: center;
-  width: 100%;
-  height: 40px;
-  line-height: 40px;
-  position: fixed;
-  bottom: 0;
+  flex-shrink: 0;
+  display: flex;
+  justify-content: center;
+  height: 30px;
+  line-height: 30px;
+  background-color: var(--evenDarkerBackgroundBlack);
 }
 
 .cvLink {
-  font-family: 'Roboto', sans-serif;
   text-decoration: none;
-  color: var(--silverTextColor);
-  font-size: 20px;
-  transition: color 0.5s;
+  color: var(--textSilver);
+  transition: color 0.3s;
 }
 
 .cvLink:hover {
-  color: var(--languageHoverColor);
-}
-
-@media screen and (max-width: 1200px) {
-  .knowledgeBlock {
-    flex-direction: column;
-    margin-bottom: 200px;
-    align-items: center;
-  }
-}
-
-@media screen and (max-width: 1000px) {
-  .knowledgeStack, .knowledgeTools, .knowledgeEducation, .knowledgeMe {
-    width: 30vh;
-  }
+  color: var(--hoverGreen);
 }
