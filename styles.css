@@ -56,6 +56,10 @@ body {
   color: var(--hoverGreen);
 }
 
+.cv {
+  padding-right: 20px;
+}
+
 .greetingsBlock {
   display: flex;
   flex-direction: column;
@@ -108,23 +112,4 @@ body {
     grid-template-columns: repeat(1, 1fr);
     row-gap: 30px;
   }
-}
-
-.contactsBlock {
-  flex-shrink: 0;
-  display: flex;
-  justify-content: center;
-  height: 30px;
-  line-height: 30px;
-  background-color: var(--evenDarkerBackgroundBlack);
-}
-
-.cvLink {
-  text-decoration: none;
-  color: var(--textSilver);
-  transition: color 0.3s;
-}
-
-.cvLink:hover {
-  color: var(--hoverGreen);
 }
