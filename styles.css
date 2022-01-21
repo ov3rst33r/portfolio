@@ -125,4 +125,16 @@ body {
   .knowledgeStack, .knowledgeTools, .knowledgeEducation, .knowledgeMe {
     scale: 1.3;
   }
+
+  .knowledgeStack:hover, .knowledgeTools:hover, .knowledgeEducation:hover, .knowledgeMe:hover {
+    scale: 1.3;
+  }
+
+  .greetingsBlock_title {
+    font-size: 50px;
+  }
+  
+  .greetingsBlock_subTitle {
+    font-size: 20px;
+  }
 }
