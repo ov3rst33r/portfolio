@@ -104,13 +104,26 @@ body {
 @media screen and (max-width: 1024px) {
   .knowledgeBlock {
     grid-template-columns: repeat(2, 1fr);
-    row-gap: 30px;
+    gap: 50px;
+  }
+
+  .knowledgeStack, .knowledgeTools, .knowledgeEducation, .knowledgeMe {
+    scale: 1.1;
   }
 }
 
 @media screen and (max-width: 600px) {
+  .header {
+    height: 100px;
+    font-size: 30px;
+  }
+
   .knowledgeBlock {
     grid-template-columns: repeat(1, 1fr);
-    row-gap: 30px;
+    row-gap: 100px;
+  }
+
+  .knowledgeStack, .knowledgeTools, .knowledgeEducation, .knowledgeMe {
+    scale: 1.3;
   }
 }
