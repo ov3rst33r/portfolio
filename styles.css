@@ -1,13 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
 :root {
-  --mainBackgroundBlack: #000000;
-  --lighterBackgroundBlack: #2c2c3a;
-  --evenDarkerBackgroundBlack: #0c0c0f;
-  --textSilver: #d6d6d6;
-  --hoverGreen: #32936f;
-  --perfectBlue: #0051ff;
-  --boxShadowPink: #c86fc9;
+  --mainBackgroundColor: #595457;
+  --darkerBackgroundColor: #353133;
+  --textColor: #d6d6d6;
+  --hoverColor: #4D6CFA;
+  --accentColor: #610522;
+  --boxShadowColor: #353133;
 }
 
 * {
@@ -19,9 +18,9 @@ body {
   flex-direction: column;
   gap: 120px;
   height: 100%;
-  background-color: var(--mainBackgroundBlack);
+  background-color: var(--mainBackgroundColor);
   font-family: 'Roboto', sans-serif;
-  color: var(--textSilver);
+  color: var(--textColor);
 }
 
 .header {
@@ -29,7 +28,7 @@ body {
   justify-content: space-between;
   align-items: center;
   height: 60px;
-  background-color: var(--lighterBackgroundBlack);
+  background-color: var(--darkerBackgroundColor);
 }
 
 .headerNav {
@@ -41,19 +40,14 @@ body {
 
 .navLink {
   text-decoration: none;
-  color: var(--textSilver);
+  color: var(--textColor);
   font-family: 'Roboto', sans-serif;
   font-size: 20px;
   transition: color 0.5s;
 }
 
-.navLink-linkedIn {
-  pointer-events: none;
-  color: gray;
-}
-
 .navLink:hover {
-  color: var(--hoverGreen);
+  color: var(--hoverColor);
 }
 
 .cv {
@@ -82,6 +76,7 @@ body {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   column-gap: 30px;
+  margin-bottom: 100px;
 }
 
 .knowledgeStack, .knowledgeTools, .knowledgeEducation, .knowledgeMe {
@@ -89,15 +84,21 @@ body {
   padding: 20px;
   text-align: center;
   max-width: 250px;
-  background-color: var(--evenDarkerBackgroundBlack);
-  border: 2px solid var(--perfectBlue);
+  background-color: var(--darkerBackgroundColor);
+  border: 2px solid var(--accentColor);
   border-radius: 8px;
-  box-shadow: 8px 8px var(--boxShadowPink);
+  box-shadow: 6px 6px var(--boxShadowColor);
+  transition: scale 0.5s, box-shadow 0.5s;
+}
+
+.knowledgeStack:hover, .knowledgeTools:hover, .knowledgeEducation:hover, .knowledgeMe:hover {
+  scale: 1.1;
+  box-shadow: 8px 8px var(--boxShadowColor);
 }
 
 .blockTitle {
   padding-bottom: 30px;
-  text-shadow: 2px 2px var(--perfectBlue);
+  text-shadow: 2px 2px var(--accentColor);
 }
 
 @media screen and (max-width: 1024px) {
