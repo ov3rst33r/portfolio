@@ -4,9 +4,11 @@
   --mainBackgroundColor: #595457;
   --darkerBackgroundColor: #353133;
   --textColor: #d6d6d6;
-  --hoverColor: #4D6CFA;
+  --hoverColor: #4d6cfa;
   --accentColor: #610522;
   --boxShadowColor: #353133;
+  --ampliLinkColor: #df3b3c;
+  --mateLinkColor: #e25544;
 }
 
 * {
@@ -21,6 +23,17 @@ body {
   background-color: var(--mainBackgroundColor);
   font-family: 'Roboto', sans-serif;
   color: var(--textColor);
+}
+
+.link {
+  text-decoration: none;
+  color: var(--textColor);
+  font-family: 'Roboto', sans-serif;
+  transition: color 0.5s;
+}
+
+.link:hover {
+  color: var(--hoverColor);
 }
 
 .header {
@@ -39,15 +52,7 @@ body {
 }
 
 .navLink {
-  text-decoration: none;
-  color: var(--textColor);
-  font-family: 'Roboto', sans-serif;
   font-size: 20px;
-  transition: color 0.5s;
-}
-
-.navLink:hover {
-  color: var(--hoverColor);
 }
 
 .cv {
@@ -89,6 +94,14 @@ body {
   border-radius: 8px;
   box-shadow: 6px 6px var(--boxShadowColor);
   transition: scale 0.5s, box-shadow 0.5s;
+}
+
+.ampliLink {
+  color: var(--ampliLinkColor);
+}
+
+.mateLink {
+  color: var(--mateLinkColor);
 }
 
 .knowledgeStack:hover, .knowledgeTools:hover, .knowledgeEducation:hover, .knowledgeMe:hover {
