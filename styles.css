@@ -1,12 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
 :root {
-  --mainBackgroundColor: #595457;
-  --darkerBackgroundColor: #353133;
+  --mainBackgroundColor: #070b0c;
+  --darkerBackgroundColor: #172327;
   --textColor: #d6d6d6;
-  --hoverColor: #4d6cfa;
-  --accentColor: #610522;
-  --boxShadowColor: #353133;
+  --hoverColor: #CC0030;
+  --accentColor: #580014;
+  --boxShadowColor: #0F171A;
   --ampliLinkColor: #df3b3c;
   --mateLinkColor: #e25544;
 }
@@ -70,6 +70,10 @@ body {
   font-size: 60px;
 }
 
+.greetingsBlock_name {
+  text-shadow: 3px 3px var(--accentColor);
+}
+
 .greetingsBlock_subTitle {
   font-size: 30px;
 }
@@ -93,7 +97,7 @@ body {
   border: 2px solid var(--accentColor);
   border-radius: 8px;
   box-shadow: 6px 6px var(--boxShadowColor);
-  transition: scale 0.5s, box-shadow 0.5s;
+  transition: scale 0.5s, box-shadow 0.5s, border 1s;
 }
 
 .ampliLink {
@@ -107,6 +111,7 @@ body {
 .knowledgeStack:hover, .knowledgeTools:hover, .knowledgeEducation:hover, .knowledgeMe:hover {
   scale: 1.1;
   box-shadow: 8px 8px var(--boxShadowColor);
+  border: 2px solid var(--hoverColor);
 }
 
 .blockTitle {
