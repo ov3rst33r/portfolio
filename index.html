@@ -9,6 +9,10 @@
 	  <title>Viktor Seletskyi | Junior Front-End developer</title>
 	  <link rel="stylesheet" href="styles.css">
 	  <link rel="icon" href="assets/amogus.ico">
+	  <script src="./scripts.js"></script>
+	  <audio id="hoverSound">
+		<source src="./assets/zoom.ogg"></source>
+	  </audio>
 	</head>
 
 	<body>
@@ -46,7 +50,7 @@
 		<h2 class="greetingsBlock_subTitle"> I am junior Front-End developer <br> looking for new experience </h2>
       </main>
 
-	  <div class="knowledgeBlock">
+	  <div class="knowledgeBlock" id="block">
 		  <div class="knowledgeStack">
 			  <h2 class="blockTitle"> Stack </h2>
 			  <div class="stackContent">
@@ -61,7 +65,7 @@
 			   </div>
 		  </div>
 
-		  <div class="knowledgeTools">
+		  <div class="knowledgeTools" id="block">
 			  <h2 class="blockTitle"> Tools </h2>
 			    <div class="toolsContent">
 				  Visual Studio Code <br>
@@ -73,7 +77,7 @@
 				</div>
 		  </div>
 
-		  <div class="knowledgeEducation">
+		  <div class="knowledgeEducation" id="block">
 			  <h2 class="blockTitle"> Education </h2>
 			    <div class="educationContent">
 			      I study applied programming in the
@@ -95,7 +99,7 @@
 			    </div>
 		  </div>
 
-		  <div class="knowledgeMe">
+		  <div class="knowledgeMe" id="block">
 			  <h2 class="blockTitle">About me</h2>
 			    <div class="meContent">
 			      I am eager to learn new things and make my dreams 
@@ -103,6 +107,14 @@
 			      fit in any team. Right now I'm quartered in Kyiv, Ukraine.
 			    </div>
 		  </div>
-	  </div>              
+
+		  <script>
+			var block = document.querySelector('#block') 
+			var audio = document.querySelector('#hoverSound')
+			block.addEventListener("mouseenter", function(){
+			  audio.play()
+			});
+		  </script>
+	  </div>
 	</body>
 </html>
